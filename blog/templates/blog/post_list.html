@@ -1,28 +1,35 @@
 <html>
 	<head>
-        <title>Tany's blog</title>
-    </head>
-    <body>
-    	<!--Tu napisem koment-->
-    	<center>
-    		<h1>Ahoj!</h1>
-    	</center>
-    	<div>
-	    	<p>Funguje to!</p>
-	    	<em>Jupiiiiiii</em>
-    	</div>
+		<title>Tany's blog</title>
+	</head>
+	<body>
+		<!--Tu napisem koment-->
+		<center>
+			<h1>Ahoj!</h1>
+		</center>
+		<div>
+			<!--<p>Funguje to!</p>
+			<em>Jupiiiiiii</em>
+		</div>
 
-    	<div>
-	    	<p>toto je odkaz na <a href="http://djangogirls.org">DjangoGirls</a></p>
-    	</div>
-    	<div>
-	    	<ul>
-	    		<li>První položka seznamu</li>
-	    		<li>second item</li>
-	    		<li>Published: 13.03.2016, 12:53</li>
-	    	</ul>
-    	</div>
+		<div>
+			<p>toto je odkaz na <a href="http://djangogirls.org">DjangoGirls</a></p>
+		</div>
+		<div>
+			<ul>
+				<li>První položka seznamu</li>
+				<li>second item</li>
+				<li>Published: 13.03.2016, 12:53</li>
+			</ul>-->
+			{% for post in posts %}
+				<div>
+					<p>published: {{ post.published_date }}</p>
+					<h1><a href="">{{ post.title }}</a></h1>
+					<p>{{ post.text|linebreaks }}</p>
+				</div>
+			{% endfor %}
+		</div>
 
-    </body>
-    
+	</body>
+	
 </html>
